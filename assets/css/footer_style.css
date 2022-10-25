@@ -1,0 +1,147 @@
+footer {
+  position: relative;
+
+  font-size: calc((13 / 15)*1rem);
+  line-height: 1.5;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer-inner {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-inner {
+    display: flex;
+    max-width: 50rem;
+  } 
+}
+
+.footer-profile {
+  position: relative;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-profile {
+    width: 50%;
+  }
+}
+
+.footer-profile .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.address {
+  /* margin-top: 0.5rem; */
+}
+
+.sns {
+  position: absolute;
+  bottom: 0;
+  right: 0rem;
+
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .sns {
+    right: 2rem;
+
+    font-size: 2rem;
+  }
+}
+
+.sns a:hover {
+  color: #777;
+}
+
+.sns a {
+  margin-left: 1rem;
+}
+
+.footer-link_01 {
+  /* margin: 0 -1rem; */
+  /* padding: 0 1rem; */
+  border-top: 1px solid #777;
+}
+.footer-link_01 li {
+  /* margin: 0 -1rem; */
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #777;
+}
+@media screen and (min-width: 768px) {
+  .footer-link_01 {
+    margin: 2rem 0 0;
+    padding: 0;
+    width: 25%;
+    border: none;
+  }
+  .footer-link_01 li {
+    margin: 0;
+    padding: 0.25rem 0;
+    border-bottom: none;
+  }
+}
+
+.footer-link_02 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+.footer-link_02 li {
+  width: 50%;
+  margin: 0.25rem 0;
+}
+@media screen and (min-width: 768px) {
+  .footer-link_02 {
+    display: block;
+    margin: 2rem 0 0;
+    width: 25%;
+    padding: 0;
+  }
+  .footer-link_02 li {
+    margin: 0;
+    padding: 0.25rem 0;
+    width: 100%;
+  }
+}
+
+.footer-copyright {
+  padding: 1rem 2rem;
+  background-color: #000;
+  text-align: center;
+}
+
+.footer-copyright small {
+  font-size: calc((12 /15)*1rem);
+}
+
+.footer-pagetop {
+  position: absolute;
+  right: 0;
+  top: -3.2rem;
+}
+
+.footer-pagetop a {
+  display: block;
+  width: 3rem;
+  height: 0;
+  padding-top: 3rem;
+  overflow: hidden;
+  background-color: #555;
+}
+
+.footer-pagetop a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: translate(-50%, -25%) rotate(-45deg);
+}
