@@ -8,15 +8,15 @@
   left: 0;
 
   width: 100%;
-  height: 9rem;
+  height: 18rem;
   background: rgba(255, 255 ,255 , .8);
   /* 移植する際は変更する。 */
   z-index: 1000;
 }
 @media (min-width: 768px) {
   .header {
-    height: 13rem;
-    background: rgba(255, 255 ,255 , .95);
+    height: 12.5rem;
+    background-color: rgba(255, 255 ,255 , .95);
   }
 }
 
@@ -26,23 +26,41 @@
   align-items: center;
   
   margin-top: 0;
-  padding-top: 2rem;
-  height: 9rem;
+  padding-top: 4rem;
 }
 @media (min-width: 768px) {
   .header-top {
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     
     padding-top: 0;
     height: 5rem;
   }
+
+  .header-top a {
+    display: block;
+    padding-top: 0.75rem;
+  }
+}
+
+
+
+.logo img {
+  width: 300px;
 }
 
 .header-info {
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .header-info {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
 .header-inner {
   /* 各要素を入れる入れ物 */
 
@@ -64,6 +82,17 @@
   /* withが800＋40px以下になったら
           padding両端で20pxを維持するよう宣言 */
   /* padding: 0 1.5rem; */
+}
+
+.header-info p {
+  text-align: center;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .header-info p {
+    text-align: left;
+    line-height: 1.4;
+  }
 }
 
 /* 3本線ボタンの設定 */
@@ -129,7 +158,7 @@
 }
 
 .header .btn-block {
-  padding: 0.25rem 2rem 0.25rem 1rem;
+  padding: 0.25rem 1.5rem;
   font-size: 1.2rem;
   color: #fff;
   background-color: rgb(0, 70, 136);
@@ -149,7 +178,7 @@
 .header-info .tel-number {
   margin-top: 0rem;
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: rgb(243, 137, 56);
 }
@@ -158,6 +187,7 @@
     font-size: 1rem;
   }
   .header-info .tel-number {
+    padding-top: 0;
     font-size: 1.5rem;
   }
   .header .btn-block::after {
@@ -208,32 +238,36 @@
 @media (min-width: 768px) {
   .gnav-list {
     flex-direction: row;
+
+    text-align: center;
   }
   .gnav-list li {
+    display: inline-block;
     width: 8.5rem;
-    text-align: center;
+
+    position: relative;
   }
   .gnav-list li:not(:first-of-type) {
     border-left: 1px dotted #555;
   }
+
   .sub-menu li:not(:first-of-type) {
     border-left: none;
   }
-  
   .sub-menu li {
       border-bottom: 1px dotted #777;
   }
 
-
   .gnav-list li a {
     display: block;
-    padding-top: 0.5rem;
+    padding: 0.5rem 0rem;
     font-size: 13px;
     color: #7b645d;
   }
 
   .gnav-list li a:hover {
     border-bottom: 5px solid #7b645d;
+    background-color: bisque;
     transition: 0.5s;
   }
 
@@ -255,32 +289,34 @@
     text-transform: uppercase;
   }
 
-  .fork-anchor {
-    position: relative;
-  }
   .sub-menu {
     position: absolute;
-    top: 0rem;
+    top: 2rem;
     left: 0;
-    /* margin-top: 3rem; */
-    /* padding-top: 2rem; */
+
     font-size: 13px;
     font-weight: 400;
     display: none;
+    z-index: -10;
   }
   .sub-menu li {
-    margin-top: 6rem;
+    margin-top: 4.5rem;
     background-color: rgba(255, 255, 255, .95);
+  }
+  .sub-menu li:first-child::before {
+    content: "▼";
+    font-size: 1rem;
+    color: #7b645d;
   }
   .sub-menu li:not(:first-of-type) {
     margin-top: 0;
     background-color: rgba(255, 255, 255, .95);
   }
   .sub-menu li a {
-    padding-top: 1rem;
+    padding-top: 0.8rem;
     height: 3rem;
   }
-  .fork-anchor:hover>.sub-menu {
+  .gnav-list li:hover>.sub-menu {
     display: block;
   }
 }
