@@ -37,7 +37,6 @@
     padding-top: 0;
     height: 5rem;
   }
-  
 }
 
 .header-info {
@@ -211,7 +210,7 @@
     flex-direction: row;
   }
   .gnav-list li {
-    width: 9rem;
+    width: 8.5rem;
     text-align: center;
   }
   .gnav-list li:not(:first-of-type) {
@@ -220,6 +219,11 @@
   .sub-menu li:not(:first-of-type) {
     border-left: none;
   }
+  
+  .sub-menu li {
+      border-bottom: 1px dotted #777;
+  }
+
 
   .gnav-list li a {
     display: block;
@@ -237,7 +241,7 @@
     display: block;
     margin: 0 auto;
     height: 24px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .gnav-list [lang="en"] {
@@ -245,7 +249,7 @@
 
     margin-top: 0.5rem;
     font-family: 'Work Sans', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1;
     font-weight: 100;
     text-transform: uppercase;
@@ -265,7 +269,7 @@
     display: none;
   }
   .sub-menu li {
-    margin-top: 5.5rem;
+    margin-top: 6rem;
     background-color: rgba(255, 255, 255, .95);
   }
   .sub-menu li:not(:first-of-type) {
