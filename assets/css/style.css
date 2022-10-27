@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
-/* orange rgb(243, 137, 56); */
-/* blue rgb(0, 70, 136) */
+/* orange rgb(240, 131, 0); */
+/* brown rgb(145, 109, 65); */
+/* blue rgb(32, 96, 173) */
 html {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
@@ -22,7 +23,7 @@ main {
 }
 @media (min-width: 768px) {
   main {
-    margin-top: 12.5rem;
+    margin-top: 11.25rem;
   }
 }
 
@@ -127,7 +128,7 @@ section {
   content: "";
   height: 13.5rem;
   margin-right: 1.5rem;
-  border: 2px solid rgb(243, 137, 56);
+  border: 2px solid rgb(240, 131, 0);
   transform: translateY(0.5rem) rotate(-15deg);
 }
 @media (min-width: 768px) {
@@ -143,7 +144,7 @@ section {
   content: "";
   height: 13.5rem;
   margin-left: 1.5rem;
-  border: 2px solid rgb(243, 137, 56);
+  border: 2px solid rgb(240, 131, 0);
   transform: translateY(0.5rem) rotate(15deg);
 }
 @media (min-width: 768px) {
@@ -175,7 +176,7 @@ section {
 }
 
 a:hover {
-  color: rgb(243, 137, 56);
+  color: rgb(240, 131, 0);
 }
 
 h3 {
@@ -244,7 +245,7 @@ dd {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 700;
-  color: rgb(243, 137, 56);
+  color: rgb(240, 131, 0);
 }
 .tel-number i {
   margin-right: 0.5rem;
