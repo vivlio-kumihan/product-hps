@@ -252,6 +252,9 @@
   transform: translateX(100%);
   transition: all 0.3s;
 }
+.menuIsOpen {
+  transform: translateX(0);
+}
 .gnav::-webkit-scrollbar {
   /* Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード */
   display: none;
