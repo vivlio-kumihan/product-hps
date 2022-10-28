@@ -15,7 +15,7 @@ footer {
 @media screen and (min-width: 768px) {
   .footer-inner {
     display: flex;
-    max-width: 50rem;
+    max-width: 1280px;
   } 
 }
 
@@ -25,13 +25,8 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .footer-profile {
-    width: 50%;
+    width: 20%;
   }
-}
-
-.footer-profile .logo {
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 .address {
@@ -61,52 +56,22 @@ footer {
   margin-left: 1rem;
 }
 
-.footer-link_01 {
-  /* margin: 0 -1rem; */
-  /* padding: 0 1rem; */
-  border-top: 1px solid #777;
-}
-.footer-link_01 li {
-  /* margin: 0 -1rem; */
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #777;
-}
-@media screen and (min-width: 768px) {
-  .footer-link_01 {
-    margin: 2rem 0 0;
-    padding: 0;
-    width: 25%;
-    border: none;
-  }
-  .footer-link_01 li {
-    margin: 0;
-    padding: 0.25rem 0;
-    border-bottom: none;
+@media (min-width: 768px) {
+  .footer-nav-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-left: 5%;
   }
 }
 
-.footer-link_02 {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem 0;
-}
-.footer-link_02 li {
-  width: 50%;
-  margin: 0.25rem 0;
-}
-@media screen and (min-width: 768px) {
-  .footer-link_02 {
-    display: block;
-    margin: 2rem 0 0;
-    width: 25%;
-    padding: 0;
-  }
-  .footer-link_02 li {
-    margin: 0;
-    padding: 0.25rem 0;
-    width: 100%;
-  }
-}
+/****************************** 覚書 ******************************/
+/* footerのnav-listについて、現状はnavigationに書いている。
+PC、スマホのヘッダーと構造を供用できるようになったら
+ここに記述する予定。
+アコーディオンメニューで構築を考えている。 */
 
 .footer-copyright {
   padding: 1rem 2rem;
