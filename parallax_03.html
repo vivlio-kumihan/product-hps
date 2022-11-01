@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/destyle.css">
+  <style>
+    /* 全体 */
+    .slide {
+      position   : fixed;
+      max-width  : 100%;
+      height     : 100vh;
+      margin     : auto;
+      overflow   : hidden;
+      background-color: #333;
+    }
+
+    /* スライドショー背景の設定 */
+    .slide .bgImg {
+      position   : absolute;
+      top        : 0;
+      left       : 0;
+      bottom     : 0;
+      right      : 0;
+      opacity    : 0;
+      background-size:cover;
+      /* 3枚を5s毎で計15s */
+      animation  : pseudoAnimation 15s infinite; /* infiniteで繰り返す */ 
+    }
+
+    /* 時間差で背景画像のアニメーションを開始 */
+    .slide .srcImage1 {
+      background-image : url(./assets/img/img_mv1.jpg);   /* 背景の画像を指定 */
+    }
+    .slide .srcImage2 {
+      background-image : url(./assets/img/img_mv2.jpg);   /* 背景の画像を指定 */
+      animation-delay  : 5s;
+    }
+    .slide .srcImage3 {
+      background-image : url(./assets/img/img_mv3.jpg);   /* 背景の画像を指定 */
+      animation-delay  : 10s;
+    }
+    
+    /* 20sのうち最初の約5sだけ表示する */
+    @keyframes pseudoAnimation {
+      0% { opacity: 0; }
+      5% { opacity: 1; } /* 表示タイミングをずらしてフェードイン風に */
+      25% { opacity: 1; }
+      30% { opacity: 1; }
+      50% { opacity: 0; }
+    100% { opacity: 0; }
+    }
+
+    /* パララックスをみるための文字 */
+    .slide .parallaxString{
+      position   : absolute;
+      padding    : 15px;
+      font-size: 3rem;
+      color      : #fff;
+      background : rgba(0, 0, 0, 0.2);
+      top        : 50%; /* absoluteにおける上下集中央寄せ */
+      left       : 50%;
+      transform  : translate(-50%,-50%);
+      z-index    : 1;
+    }
+    .parallax {
+    /* パララックスをつくる部分 */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="bgImg srcImage1 parallax"></div>
+    <div class="bgImg srcImage2 parallax"></div>
+    <div class="bgImg srcImage3 parallax"></div>
+    <div class="bgImg srcImage4 parallax"></div>
+    <div class="parallaxString">パララックス</div>
+  </div>
+</body>
+</html>

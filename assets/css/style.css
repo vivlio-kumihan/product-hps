@@ -34,13 +34,39 @@ main {
 }
 
 @media (min-width: 768px) {
-  main .main-visual {
-    margin-top: 10rem;
+  .main-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 10%;
+    text-align: center;
+    color: #eee;
+    margin-top: 11.25rem;
+
+    /* animation-name: fade-in-animation;
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0; */
   }
+  /* .main-visual.fade-in-timming-1 {
+    animation-delay: 9s;
+  }
+  .main-visual.fade-in-timming-2 {
+    animation-delay: 14s;
+  }
+  @keyframes fade-in-animation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  } */
 }
+
+
+
 @media (min-width: 768px) {
-  .header .container,
-  main .container {
+  .header .container {
     /* 1050px => 70文字分 */
     max-width: calc(70*1rem); 
     padding: 0 2rem;

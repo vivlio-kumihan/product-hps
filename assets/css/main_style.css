@@ -1,45 +1,97 @@
 @charset "utf-8";
 
-.main-visual {
+.slide {
+  /* 相対的とすることで
+  スライダー以降のコンテンツが
+  上を通り過ぎるように見せる事ができる。 */
   position: relative;
-
-  margin: 0 auto;
-  width: 100%;
-  height: 100vh;
-}
-@media (min-width: 768px) {
-  .main-visual {
-    height: 80vh;
-  } 
+  
+  z-index: -100;
 }
 
-.swiper-slide {
+/* スライドショー背景の設定 */
+.slide .mv-bg-image {
+  position: fixed;
+  /* 四をを0にすることで画をを全画面に引き伸ばしているイメージ。 */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+
+  /* 3枚を5s毎で計15s */
+  /* infiniteで繰り返す */
+  animation: mv-bg-animation 15s infinite;
+}
+
+/* 50%を境にオンオを調整、表示タイミングをずらしてフェードイン風にする。 */
+@keyframes mv-bg-animation {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* 時間差で背景画像のアニメーションを開始 */
+.slide .src-image01 {
+  background-image: url(../img/img_mv1.jpg);
+}
+
+.slide .src-image02 {
+  background-image: url(../img/img_mv2.jpg);
+  animation-delay: 5s;
+}
+
+.slide .src-image03 {
+  background-image: url(../img/img_mv3.jpg);
+  animation-delay: 10s;
+}
+
+.parallax_content {
+  /* 下に固定されたbackgroundの写真の高さの調整をここでする。 */
+  min-height: 100vh;
+  background-position: center top;
   background-repeat: no-repeat;
-  background-position: top;
+  background-attachment: fixed;
   background-size: cover;
 }
 
-.swiper-slide.slide1 {
-  background-image: url(../img/img_mv1_smp.jpg);
-}
-.swiper-slide.slide2 {
-  background-image: url(../img/img_mv2_smp.jpg);
-}
-.swiper-slide.slide3 {
-  background-image: url(../img/img_mv3_smp.jpg);
-}
-@media (min-width: 768px) {
-  .swiper-slide.slide1 {
-    background-image: url(../img/img_mv1.jpg);
-  }
-  .swiper-slide.slide2 {
-    background-image: url(../img/img_mv2.jpg);
-  }
-  .swiper-slide.slide3 {
-    background-image: url(../img/img_mv3.jpg);
-  }
+.parallax-front-container {
+  padding: 60px;
+  background-color: #fff;
 }
 
+.main-visual .ttl {
+  margin-bottom: 2.5rem;
+  font-size: 5rem;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+  /* 200 or 300 or 400 or 500 or 600 or 700 or 900 */
+}
+.main-visual .ttl::first-letter {
+  letter-spacing: 0.25em;
+}
+
+.main-visual .catch {
+  font-size: 1.5rem;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+}
+
+.main-visual .ttl,
+.main-visual .catch {
+  text-shadow: 
+      0px 1px 5.9px rgba(0, 0, 0, 0.175),
+      0px 2.3px 14.3px rgba(0, 0, 0, 0.305),
+      0px 4.4px 26.9px rgba(0, 0, 0, 0.353),
+      0px 7.8px 48px rgba(0, 0, 0, 0.336),
+      0px 14.6px 89.8px rgba(0, 0, 0, 0.331),
+      0px 35px 215px rgba(0, 0, 0, 0.36);
+}
 
 .service-recommend {
 }
