@@ -33,6 +33,11 @@ main {
   width: 100%;
 }
 
+.parallax-front-container .container {
+  width: 70rem;
+
+}
+
 @media (min-width: 768px) {
   .main-visual {
     display: flex;
@@ -92,6 +97,13 @@ section {
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 0.1rem;
+}
+
+.ttl2-catch {
+  margin: 1rem 0 2rem;
+  font-size: 1.2rem;
+  height: 1.2;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: 768px) {
@@ -199,6 +211,19 @@ section {
 
 ._margin-left {
   margin-left: 1.5rem;
+}
+
+.move-site {
+  display: block ;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgb(32, 96, 173);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 a:hover {

@@ -93,50 +93,34 @@
       0px 35px 215px rgba(0, 0, 0, 0.36);
 }
 
-.service-recommend {
+.operating-sites {
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
-  .service-recommend {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  .operating-sites {
+    flex-direction: row;
   }
 }
 
-.service-recommend-item {
+.operating-sites-content {
   margin-top: 1rem;
   padding: 1rem;
   line-height: 1.3;
-  color: whitesmoke;
-  background-color: rgb(32, 96, 173);
+  color: #555;
+  background-color: #eee;
   border-radius: 0.25rem;
 }
 @media (min-width: 768px) {
-  .service-recommend-item {
-    margin-top: 0rem;
-    width: 32%;
+  .operating-sites-content {
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 0;
   }
-}
-
-.service-recommend-item::before {
-  content: "";
-  display: block;
-  margin: 0 auto 1rem;
-  width: auto;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.service-recommend-item._card::before {
-  background-image: url(../img/img_banner_nenga2023.jpg);
-}
-.service-recommend-item._ud::before {
-  background-image: url(../img/img_banner_UD.jpg);
-}
-.service-recommend-item._calendar::before {
-  background-image: url(../img/img_banner_nameCalendar2023.jpg);
+  .content-info {
+    padding: 1rem;
+    text-align: center;
+  }
 }
 
 .useful-info {
