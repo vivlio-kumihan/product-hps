@@ -28,6 +28,19 @@
 //   },
 // });
 
+// hidden header-top
+
+let beforeScrollValue = 0
+const topClassList = document.querySelector('section.header-top').classList
+window.addEventListener('scroll', () => {
+  if (window.scrollY > beforeScrollValue) {
+    topClassList.add('pullUp')
+  } else {
+    topClassList.remove('pullUp')
+  }
+  beforeScrollValue = window.scrollY
+})
+
 // hamburger menu
 
 const menu = document.querySelector(".gnav")
@@ -48,3 +61,4 @@ button.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
   toggleMenu()
 })
+

@@ -20,6 +20,7 @@ html {
 
 main {
   width: 100%;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   main {
@@ -28,14 +29,7 @@ main {
 }
 
 .container {
-  margin: 0 auto;
   padding: 0 1rem;
-  width: 100%;
-}
-
-.parallax-front-container .container {
-  width: 70rem;
-
 }
 
 @media (min-width: 768px) {
@@ -68,18 +62,23 @@ main {
   } */
 }
 
-
-
 @media (min-width: 768px) {
   .header .container {
     /* 1050px => 70文字分 */
     max-width: calc(70*1rem); 
+    margin: 0 auto;
     padding: 0 2rem;
   }
 }
 
+
 section {
-  margin-top: 4rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  section {
+    margin-top: 4rem;  
+  }
 }
 
 .ttl-level2 {
