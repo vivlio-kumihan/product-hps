@@ -20,19 +20,14 @@ html {
 
 main {
   width: 100%;
-  margin: 0 auto;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   main {
     margin-top: 11.25rem;
   }
 }
 
-.container {
-  padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .main-visual {
     display: flex;
     flex-direction: column;
@@ -62,22 +57,12 @@ main {
   } */
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .header .container {
     /* 1050px => 70文字分 */
     max-width: calc(70*1rem); 
     margin: 0 auto;
     padding: 0 2rem;
-  }
-}
-
-
-section {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  section {
-    margin-top: 4rem;  
   }
 }
 
@@ -105,7 +90,7 @@ section {
   overflow-wrap: break-word;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .ttl {
     font-size: calc((25 / 15)*1rem);
   }
@@ -144,7 +129,7 @@ section {
 .ttl-halftone br {
   display: none;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .ttl-halftone br {
     display: inline;
   }
@@ -168,7 +153,7 @@ section {
   border: 2px solid rgb(240, 131, 0);
   transform: translateY(0.5rem) rotate(-15deg);
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .ttl-loud::before {
     height: 5rem;
     margin-right: 0.5rem;
@@ -184,7 +169,7 @@ section {
   border: 2px solid rgb(240, 131, 0);
   transform: translateY(0.5rem) rotate(15deg);
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .ttl-loud::after {
     height: 5rem;
     margin-right: 0.5rem;
@@ -195,7 +180,7 @@ section {
 .br-in-pc {
   display: none;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .br-in-smp  {
     display: none;
   }

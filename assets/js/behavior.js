@@ -28,10 +28,10 @@
 //   },
 // });
 
-// hidden header-top
-
+///////// 要リファクタリング /////////
+// hidden header and header-top
 let beforeScrollValue = 0
-const topClassList = document.querySelector('section.header-top').classList
+const topClassList = document.querySelector('.header').classList
 window.addEventListener('scroll', () => {
   if (window.scrollY > beforeScrollValue) {
     topClassList.add('pullUp')
@@ -40,6 +40,17 @@ window.addEventListener('scroll', () => {
   }
   beforeScrollValue = window.scrollY
 })
+let beforeScrollValue_4headerTop = 0
+const topClassList_headerTop = document.querySelector('section.header-top').classList
+window.addEventListener('scroll', () => {
+  if (window.scrollY > beforeScrollValue_4headerTop) {
+    topClassList_headerTop.add('pullUp')
+  } else {
+    topClassList_headerTop.remove('pullUp')
+  }
+  beforeScrollValue_headerTop = window.scrollY
+})
+
 
 // hamburger menu
 

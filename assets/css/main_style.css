@@ -1,35 +1,5 @@
 @charset "utf-8";
 
-@media (min-width: 768px) {
-  .main-visual .ttl {
-    margin-bottom: 2.5rem;
-    font-size: 5rem;
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 500;
-    /* 200 or 300 or 400 or 500 or 600 or 700 or 900 */
-  }
-
-  .main-visual .ttl::first-letter {
-    letter-spacing: 0.25em;
-  }
-
-  .main-visual .catch {
-    font-size: 1.5rem;
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 500;
-  }
-
-  .main-visual .ttl,
-  .main-visual .catch {
-    text-shadow:
-      0px 1px 5.9px rgba(0, 0, 0, 0.175),
-      0px 2.3px 14.3px rgba(0, 0, 0, 0.305),
-      0px 4.4px 26.9px rgba(0, 0, 0, 0.353),
-      0px 7.8px 48px rgba(0, 0, 0, 0.336),
-      0px 14.6px 89.8px rgba(0, 0, 0, 0.331),
-      0px 35px 215px rgba(0, 0, 0, 0.36);
-  }
-}
 
 .slide {
   /* 相対的とすることで
@@ -37,8 +7,104 @@
   上を通り過ぎるように見せる事ができる。 */
   position: relative;
   
-  height: 115vh;
-  z-index: -100;
+  height: 50vh;
+  z-index: -1000;
+}
+.slide .main-visual-copy {
+  height: 0vh;
+
+}
+
+.main-visual-copy {
+  position: fixed;
+  top: 34%;
+  left: 0;
+
+  width: 100%;
+  padding: 0 1rem;
+  text-align: center;
+  color: #eee;
+  z-index: -900;
+  opacity: 0;
+  /* 3枚を5s毎で計15s */
+  /* infiniteで繰り返す */
+  animation: mv-copy-animation 15s infinite;
+}
+
+/* 50%を境にオンオを調整、表示タイミングをずらしてフェードイン風にする。 */
+@keyframes mv-copy-animation {
+  0% { opacity: 0; }
+  5% { opacity: 0; }
+  25% { opacity: 1; }
+  30% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.slide .main-visual-copy {
+  animation-delay: 0s;
+}
+
+.slide ._fade-in-1st {
+  animation-delay: 5s;
+}
+
+.slide ._fade-in-2nd {
+  animation-delay: 10s;
+}
+
+.main-visual-copy .ttl {
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+}
+
+.main-visual-copy .ttl::first-letter {
+  letter-spacing: 0.1em;
+}
+
+.main-visual-copy .catch {
+  font-size: 1.4rem;
+  line-height: 1.75;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+}
+
+.main-visual-copy .ttl,
+.main-visual-copy .catch {
+  text-shadow:
+    0px 1px 8px rgba(0, 0, 0, 0.575),
+    0px 2.3px 16px rgba(0, 0, 0, 0.505),
+    0px 4.4px 28px rgba(0, 0, 0, 0.553),
+    0px 7.8px 50px rgba(0, 0, 0, 0.536),
+    0px 14.6px 93px rgba(0, 0, 0, 0.531),
+    0px 35px 218px rgba(0, 0, 0, 0.56);
+  }
+  @media screen and (min-width: 768px) {
+    .main-visual-copy .ttl {
+      margin-bottom: 2.5rem;
+      font-size: 5rem;
+      text-shadow:
+        0px 1px 2px rgba(0, 0, 0, 0.3),
+        0px 2.3px 4px rgba(0, 0, 0, 0.3),
+        0px 4.4px 10px rgba(0, 0, 0, 0.3),
+        0px 7.8px 25px rgba(0, 0, 0, 0.3),
+        0px 14.6px 60px rgba(0, 0, 0, 0.3),
+        0px 35px 100px rgba(0, 0, 0, 0.3);
+    }
+  .main-visual-copy .ttl::first-letter {
+  }
+  .main-visual-copy .catch {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .main-visual-copy .catch br {
+    display: none;
+  }
+  .main-visual-copy .catch br._br-for-pc {
+    display: inline;
+  }
 }
 
 /* スライドショー背景の設定 */
@@ -80,18 +146,16 @@
   background-image: url(../img/img_mv3_smp.jpg);
   animation-delay: 10s;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   /* 時間差で背景画像のアニメーションを開始 */
   .slide .src-image01 {
     background-image: url(../img/img_mv1.jpg);
   }
   .slide .src-image02 {
     background-image: url(../img/img_mv2.jpg);
-    animation-delay: 5s;
   }
   .slide .src-image03 {
     background-image: url(../img/img_mv3.jpg);
-    animation-delay: 10s;
   } 
 }
 
@@ -103,7 +167,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .parallax_background {
     min-height: 25vh;
   }
@@ -125,7 +189,7 @@
   background-image: url();
   /* background-image: url(../img/img_mv2_smp.jpg); */
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .parallax_background._second {
     background-image: url(../img/img_mv2.jpg);
   }
@@ -141,15 +205,20 @@
 }
 
 .parallax-front-container {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   background-color: #fff;
+}
+@media screen and (min-width:768px) {
+  .parallax-front-container {
+    padding: 2rem 0;
+  }
 }
 
 .operating-sites {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .operating-sites {
     flex-direction: row;
 
@@ -166,7 +235,7 @@
   background-color: #eee;
   border-radius: 0.25rem;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .operating-sites-content {
     flex: 1;
     margin: 0 0.5rem;
@@ -180,7 +249,7 @@
 
 .useful-info {
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .useful-info {
     display: flex;
     flex-wrap: wrap;
@@ -188,9 +257,13 @@
     justify-content: center;
     gap: 1rem;
 
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
   }
+}
+@media screen and (min-width: 1020px) {
+  .useful-info {
+    width: 80%;
 }
 
 .useful-info-case {
@@ -200,7 +273,7 @@
   border: 1px solid #D39E27;
   border-radius: 0.25rem;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .useful-info-case {
     margin-top: 0rem;
     width: 23%;
@@ -240,7 +313,7 @@
   border: 0.7rem solid #f5e4c0;
   border-radius: .3rem;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .inquiry {
     display: flex;
     flex-wrap: wrap;
@@ -256,7 +329,7 @@
   margin: 1.25rem 0;
   padding-left: 1.7rem;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .inquiry li {
     width: 50%;
     margin: 0.75rem 0;
@@ -293,7 +366,7 @@
   width: 100%;
   padding-bottom: 1rem;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .access {
     width: 70%;
     padding-bottom: 2rem;
