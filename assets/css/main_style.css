@@ -250,7 +250,33 @@
 }
 
 .service-container {
-
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  
+  padding: 0;
+  width: 350px;
+  height: auto;
+  background-color:rgb(32, 96, 173);
+}
+@media screen and (min-width: 700px) {
+  .service-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .service-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 1050px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .service-container {
+    grid-template-columns: repeat(4, 1fr);
+    width: 1400px;
+  }
 }
 
 ._service .image {

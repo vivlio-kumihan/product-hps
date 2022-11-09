@@ -66,13 +66,29 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  .body-text-container {
-    margin: 0 auto;
+  /* main .body-text-container { */
+  main .parallax-front-contaner .body-text-container {
     max-width: 1050px;
+    margin: 0 auto;
     padding: 0 2rem;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .body-text-container._service {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .body-text-container._service {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
 .ttl-level2 {
   display: flex;
   justify-content: center;
