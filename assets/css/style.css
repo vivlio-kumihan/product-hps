@@ -74,7 +74,7 @@ main {
   }
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .body-text-container._service {
     width: 1050px;
     margin: 0 auto;
@@ -88,7 +88,8 @@ main {
     margin: 0 auto;
     padding: 0;
   }
-}
+} */
+
 .ttl-level2 {
   display: flex;
   justify-content: center;
