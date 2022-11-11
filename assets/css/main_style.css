@@ -262,9 +262,8 @@
   border-bottom: 1px solid #fff;
 }
 .body-text-container._service p {
-  padding: 0.5rem 0.5rem 0;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.7;
 
 }
@@ -429,8 +428,8 @@
 }
 
 .card-inner h3 {
-  font-size: 0.9;
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 .card-inner p {
@@ -443,7 +442,7 @@
   bottom: 0;
   right: 0;
   
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
 }
