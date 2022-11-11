@@ -288,8 +288,7 @@
     grid-auto-rows: 20vw ; */
   
     width: 700px;
-    margin: 0 auto;
-    
+    margin: 0 auto; 
   }
   .image.slide-curtains._first {
     grid-row: span 2;
@@ -509,6 +508,80 @@
   margin-bottom: 0.5rem;
 }
 
+._lastestInformation {
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  ._lastestInformation {
+    width: 50%;
+    padding-bottom: 2rem;
+  }
+}
+
+.info_list .item a {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 2px dotted #CCC;
+  padding: 20px 20px;
+}
+
+.info_list .item:last-child a {
+  border-bottom: none;
+}
+
+.info_list .item .date {
+  margin: 0;
+  min-width: 140px;
+  font-size: 16px;
+  color: #999;
+  padding: 0 20px 0 0;
+}
+
+.info_list .item .category {
+  margin: 0;
+  min-width: 140px;
+  padding: 0 20px 0 0;
+}
+
+.info_list .item .category span {
+  background: #999;
+  color: #FFF;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.info_list .item .title {
+  margin: 0;
+  width: 100%;
+}
+
+.info_list .item a:hover .title {
+  color: rgb(240, 131, 0);
+}
+
+@media screen and (max-width: 767px) {
+  .info_list .item a {
+    flex-wrap: wrap;
+  }
+
+  .info_list .item .date {
+    min-width: 100px;
+  }
+
+  .info_list .item .title {
+    margin-top: 10px;
+  }
+}
+
 .inquiry {
   padding: 0 1rem;
   font-weight: 500;
@@ -563,18 +636,18 @@
   transform: rotate(45deg);
 }
 
-.access {
+._access {
   margin: 0 auto;
   width: 100%;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .access {
-    width: 70%;
+  ._access {
+    width: 37%;
     padding-bottom: 2rem;
   }
 }
-.access p {
+._access p {
   font-size: 1.2rem;
 }
 
