@@ -197,6 +197,9 @@ main {
   }
 }
 
+._large4 {
+  font-size: 4rem;
+}
 ._center {
   text-align: center;
 }
@@ -253,9 +256,6 @@ dd {
 
 .catch {
   font-size: 1.1rem;
-}
-.body-text-container._service .catch {
-  font-size: 1.5rem;
 }
 
 .btn-center {

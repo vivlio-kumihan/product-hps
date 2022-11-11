@@ -255,6 +255,20 @@
   }
 }
 
+.body-text-container._service .catch {
+  padding-bottom: 1rem;
+  font-weight: 100;
+  font-size: 1.7rem;
+  border-bottom: 1px solid #fff;
+}
+.body-text-container._service p {
+  padding: 0.5rem 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+
+}
+
 .service-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -262,24 +276,48 @@
   
   background-color:rgb(32, 96, 173);
 }
-@media screen and (min-width: 768px) {
+.image.slide-curtains._first {
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
   .service-container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 20vw ;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(4, 250px);
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 20vw ; */
+  
+    width: 700px;
+    margin: 0 auto;
+    
+  }
+  .image.slide-curtains._first {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .service-container {
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(3, 250px);
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 20vw ; */
 
     width: 1050px;
     margin: 0 auto;
   }
 
   .image.slide-curtains._first {
-    grid-row: span 1;
-    grid-column: span 2;
+    grid-row: span 2;
+    grid-column: span 1;
   }
 }
 @media screen and (min-width: 1400px) {
   .service-container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 16vw ;
+    grid-template-columns: repeat(4, 350px);
+    grid-template-rows: repeat(2, 270px);
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 16vw ; */
 
     width: 1400px;
     margin: 0 auto;
@@ -355,7 +393,9 @@
 }
 
 .card-inner {
+  position: relative;
   display: none;
+  height: 100%;
   animation-name: fade-in;
   animation-duration: 2s;
 }
@@ -400,9 +440,16 @@
   line-height: 1.5;
 }
 .card-inner a {
-  font-size: 0.95;
-  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  font-size: 1rem;
+  font-weight: 700;
   color: #fff;
+}
+.card-inner a:hover {
+  color: rgb(240, 131, 0);
 }
 
 
