@@ -659,3 +659,19 @@
 iframe {
   width: 100%;
 }
+
+.animationTarget {
+  /* 透明度を0にして、コードはあるけど画面上から見えなくする。 */
+  opacity: 0;
+  /* オブジェクトの位置を下から上にスライドさせたため、
+  初期値を設定する。 */
+  transform: translateY(4rem);
+}
+
+.animationTarget.show {
+  opacity: 1;
+  /* オブジェクトへの効果の変容に指定した時間をかける */
+  transition: 1s;
+  /* 元の位置を指定してスライドさせせ見せ方をする。 */
+  transform: none;
+}

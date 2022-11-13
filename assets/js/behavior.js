@@ -1,33 +1,25 @@
-// slider swiper
+// スクロールするする度にフワッと...
 
-// const swiper = new Swiper('.main-visual', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
+const targetElememt = document.querySelectorAll(".animationTarget");
 
-//   autoplay: {
-//     delay: 4000
-//   },
+document.addEventListener("scroll", function () {
+  // その時その時の画面上面から注目しているオブジェクト上辺までの距離を逐次計測する関数を得る。
+  for (let i = 0; i < targetElememt.length; i++) {
+    // getBoundingClientRect()とは、
+    // その時その時の画面上面から注目しているオブジェクト上辺までの距離を逐次計測する関数。
+    // プラス、オブジェクトが半分程度見える距離でフェードインするアニメーションが始まるように
+    // 『top』メソッド（？）で得る距離にオブジェクトの半分の高さを加えて調整する。
+    const getElementDistance = targetElememt[i].getBoundingClientRect().top + targetElememt[i].clientHeight * 0.2
+    console.log(getElementDistance)
+    // 開いている画面の高さ
+    //   = 注目しているオブジェクトが画面をスクロールして画面下から出てくる距離
+    if (window.innerHeight > getElementDistance) {
+      targetElememt[i].classList.add("show")
+    }
+  }
+})
 
-//   effect: 'fade',
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
-
+// ヘッダーを隠す
 ///////// 要リファクタリング /////////
 // hidden header and header-top
 let beforeScrollValue = 0
@@ -73,3 +65,33 @@ overlay.addEventListener("click", () => {
   toggleMenu()
 })
 
+
+// slider swiper
+
+// const swiper = new Swiper('.main-visual', {
+//   // Optional parameters
+//   direction: 'vertical',
+//   loop: true,
+
+//   autoplay: {
+//     delay: 4000
+//   },
+
+//   effect: 'fade',
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+// });
